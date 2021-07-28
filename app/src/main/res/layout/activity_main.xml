@@ -11,7 +11,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/top_container"
         android:layout_width="match_parent"
         android:layout_height="146.5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +45,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:autofillHints="@string/search_hint"
             android:id="@+id/searchTxt"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -62,6 +63,7 @@
 
         <ImageView
             android:id="@+id/searchIcon"
+            android:contentDescription="@string/search_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp"
@@ -71,33 +73,36 @@
             app:srcCompat="@drawable/ic_search" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:contentDescription="@string/heart_icon"
+            android:id="@+id/heart_icon1"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/heartView"
-            app:layout_constraintStart_toStartOf="@+id/heartView"
+            app:layout_constraintBottom_toBottomOf="@+id/heartContainer"
+            app:layout_constraintStart_toStartOf="@+id/heartContainer"
             app:srcCompat="@drawable/ic_heart" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:contentDescription="@string/heart_icon"
+            android:id="@+id/heart_icon2"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginStart="3dp"
-            app:layout_constraintStart_toStartOf="@+id/heartView"
-            app:layout_constraintTop_toTopOf="@+id/heartView"
+            app:layout_constraintStart_toStartOf="@+id/heartContainer"
+            app:layout_constraintTop_toTopOf="@+id/heartContainer"
             app:srcCompat="@drawable/ic_heart" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:contentDescription="@string/heart_icon"
+            android:id="@+id/heart_icon3"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginTop="1dp"
-            app:layout_constraintEnd_toEndOf="@+id/heartView"
-            app:layout_constraintTop_toTopOf="@+id/heartView"
+            app:layout_constraintEnd_toEndOf="@+id/heartContainer"
+            app:layout_constraintTop_toTopOf="@+id/heartContainer"
             app:srcCompat="@drawable/ic_heart" />
 
         <View
-            android:id="@+id/heartView"
+            android:id="@+id/heartContainer"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginStart="12dp"
@@ -124,6 +129,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:contentDescription="@string/notification_icon"
                     android:id="@+id/notificationIcon"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -155,19 +161,20 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
-        app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@id/top_container">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollView_Constraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/UpcomingBirthdayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -201,7 +208,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/UpcomingBirthdayText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -213,11 +220,12 @@
         android:layout_height="45dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/fixed_add"
         android:backgroundTint="@null"/>
     <ImageView
+        android:contentDescription="@string/add_icon"
         android:layout_width="20dp"
         android:layout_height="20dp"
         tools:layout_editor_absoluteX="354dp"
@@ -243,6 +251,7 @@
             android:background="#8aacc8">
 
             <ImageButton
+                android:contentDescription="@string/home_icon"
                 android:id="@+id/homeBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -256,6 +265,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
+                android:contentDescription="@string/people_icon"
                 android:id="@+id/peopleBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -268,6 +278,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
+                android:contentDescription="@string/gift_icon"
                 android:id="@+id/giftBtn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -280,7 +291,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/homeTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="15dp"
                 android:text="@string/home"
@@ -291,7 +302,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/homeBtn" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/peopleTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="17dp"
                 android:text="@string/people"
@@ -302,7 +313,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/peopleBtn" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/giftsTxt"
                 android:layout_width="28dp"
                 android:layout_height="17dp"
                 android:text="@string/gifts"

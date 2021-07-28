@@ -9,4 +9,11 @@
     <string name="home">Home</string>
     <string name="people">People</string>
     <string name="gifts">Gifts</string>
+    <string name="search_icon">search Icon</string>
+    <string name="heart_icon">heart icon</string>
+    <string name="notification_icon">notification icon</string>
+    <string name="add_icon">add icon</string>
+    <string name="home_icon">home icon</string>
+    <string name="people_icon">people icon</string>
+    <string name="gift_icon">gift icon</string>
 </resources>
