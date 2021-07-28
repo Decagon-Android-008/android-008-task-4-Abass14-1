@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TaskFour</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="search_hint">search for celebrants...</string>
+    <string name="not_count">1</string>
+    <string name="yay">yaay!</string>
+    <string name="upcoming_birthdays">Upcoming birthdays</string>
+    <string name="viewpagerimage">viewPagerImage</string>
+    <string name="home">Home</string>
+    <string name="people">People</string>
+    <string name="gifts">Gifts</string>
+</resources>
